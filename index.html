@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Zero-Knowledge Civilization — Cryptography, Trust, Consensus & the Future of Digital Civilization | 零知识文明</title>
+
+<!-- SEO · GEO -->
+<meta name="description" content="A systems-level platform on zero-knowledge proofs, cryptographic trust, decentralized consensus, and the trust evolution from kinship to mathematical civilization. Bilingual EN / 中文.">
+<meta name="keywords" content="zero knowledge proof, ZK, zk-SNARK, zk-STARK, recursive proof, cryptography, trust evolution, civilization, finite field, elliptic curve, Merkle tree, polynomial commitment, Psy Protocol, network state, cypherpunk, 零知识证明, 密码学, 文明, 信任演化, 共识, 椭圆曲线">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://cryptocivilization.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://cryptocivilization.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://cryptocivilization.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://cryptocivilization.psyverse.fun/">
+<meta property="og:title" content="Zero-Knowledge Civilization — Cryptography, Trust, Consensus, Digital Civilization">
+<meta property="og:description" content="A systems-level platform on cryptographic trust evolution, ZK foundations, and the futures of programmable civilization. Bilingual EN / 中文.">
+<meta property="og:url" content="https://cryptocivilization.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zero-Knowledge Civilization">
+<meta name="twitter:description" content="Cryptography, trust, consensus, and the future of digital civilization.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0e16">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Zero-Knowledge Civilization",
+  "description": "A systems-level platform on zero-knowledge proofs, cryptographic trust, decentralized consensus, mathematical foundations, and the futures of programmable civilization.",
+  "url": "https://cryptocivilization.psyverse.fun/",
+  "inLanguage": ["en", "zh-CN"],
+  "author": { "@type": "Person", "name": "Gewenbo", "url": "https://psyverse.fun/" },
+  "publisher": { "@type": "Organization", "name": "Psyverse", "url": "https://psyverse.fun/" }
+}
+</script>
+<!-- /SEO · GEO -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230a0e16'/><rect x='2' y='2' width='28' height='28' rx='3' fill='none' stroke='%237af0a8' stroke-width='1.2'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' font-weight='600' fill='%237af0a8'>π</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+</head>
+<body>
+
+<!-- ===== Topbar ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="brand">
+      <span class="seal">π</span>
+      <span lang="en">Zero-Knowledge <em>Civilization</em></span>
+      <span lang="zh">零知识 <em>文明</em></span>
+      <span class="brand-mark">v 1.0</span>
+    </a>
+    <nav class="nav">
+      <a href="#zk"><span lang="en">ZK</span><span lang="zh">零知识</span></a>
+      <a href="#trust"><span lang="en">Trust</span><span lang="zh">信任</span></a>
+      <a href="#consensus"><span lang="en">Consensus</span><span lang="zh">共识</span></a>
+      <a href="#privacy"><span lang="en">Privacy</span><span lang="zh">隐私</span></a>
+      <a href="#narratives"><span lang="en">Narratives</span><span lang="zh">叙事</span></a>
+      <a href="#culture"><span lang="en">Culture</span><span lang="zh">文化</span></a>
+      <a href="#psy"><span lang="en">Psy &amp; Recursion</span><span lang="zh">Psy 与递归</span></a>
+      <a href="#math"><span lang="en">Math Lab</span><span lang="zh">数学实验</span></a>
+      <a href="#futures"><span lang="en">Futures</span><span lang="zh">未来</span></a>
+      <a href="#sim"><span lang="en">Simulator</span><span lang="zh">模拟器</span></a>
+      <a href="#risks"><span lang="en">Risks</span><span lang="zh">风险</span></a>
+    </nav>
+    <div class="toolbar">
+      <div class="theme-toggle"><button data-theme-set="light">◐</button><button data-theme-set="dark" class="active">◑</button></div>
+      <div class="lang-toggle"><button data-lang="en" class="active">EN</button><button data-lang="zh">中文</button></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero no-rule">
+  <div class="hero-ascii">┌─── system / cryptocivilization / boot ───┐
+│  loading: trust evolution → cryptographic │
+│  status: 7 narratives · 6 primitives · 1 π │
+└──────────────────────────────────────────┘</div>
+  <div class="hero-eyebrow">
+    <span lang="en">A systems platform · 12,000 years of trust → mathematical civilization</span>
+    <span lang="zh">系统级平台 · 一万二千年的信任 → 数学文明</span>
+  </div>
+  <h1>
+    <span lang="en">Verification <em>without disclosure</em>.</span>
+    <span lang="zh"><em>无须披露</em>的验证。</span>
+  </h1>
+  <p class="hero-sub">
+    <span lang="en">For the first time in 400 years, civilizations have a new trust primitive that does not require a central authority. Zero-knowledge proofs let you verify a fact without learning its content — and let a million strangers coordinate without trusting each other.</span>
+    <span lang="zh">四百年来首次，文明拥有了一种无须中央权威的全新信任原语。零知识证明让你在不知晓其内容的前提下验证一个事实——并让百万陌生人在彼此不信任的情况下协作。</span>
+  </p>
+  <p class="hero-lede">
+    <span lang="en">This is not a crypto-marketing site. It is a structured map of the math, the trust evolution, the seven competing ideologies, and the futures that follow if any of them succeed. A companion site to <a href="https://psy.psyverse.fun">Psy Protocol</a> and to the parallel essay at <a href="https://zk-civilization.psyverse.fun">zk-civilization</a>.</span>
+    <span lang="zh">这不是一个加密营销网站。它是一张关于数学、信任演化、七种相互竞争意识形态、以及若其中任一成功之后随之而来的未来的结构化地图。是 <a href="https://psy.psyverse.fun">Psy 协议</a>与平行篇章 <a href="https://zk-civilization.psyverse.fun">zk-civilization</a> 的伴随站点。</span>
+  </p>
+
+  <div class="hero-thesis">
+    <div>
+      <strong><span lang="en">Computation</span><span lang="zh">计算</span></strong>
+      <span lang="en">Civilizations are computers. The bigger the computer, the bigger the civilization that can run on it.</span>
+      <span lang="zh">文明就是计算机。计算机越大，能在其上运行的文明越大。</span>
+    </div>
+    <div>
+      <strong><span lang="en">Cryptography</span><span lang="zh">密码学</span></strong>
+      <span lang="en">The first technology that lets a million strangers cooperate without a priesthood, an army, or a corporation auditing them.</span>
+      <span lang="zh">首项让百万陌生人协作而无须祭司、军队或公司审计的技术。</span>
+    </div>
+    <div>
+      <strong><span lang="en">Consensus</span><span lang="zh">共识</span></strong>
+      <span lang="en">A procedure for letting a global anonymous network agree on what happened. Currency is just one of its products.</span>
+      <span lang="zh">一种让全球匿名网络对'发生了什么'达成一致的程序。货币不过是其产物之一。</span>
+    </div>
+    <div>
+      <strong><span lang="en">Shared reality</span><span lang="zh">共享现实</span></strong>
+      <span lang="en">When verification gets cheap, every claim — including the outputs of AI — can ship with a proof. Trust becomes infrastructure.</span>
+      <span lang="zh">当验证变便宜，任何主张——包括 AI 输出——都可附带证明。信任成为基础设施。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 1. ZK explained ===== -->
+<section id="zk">
+  <div class="section-eyebrow"><span lang="en">01 · What is a Zero-Knowledge Proof?</span><span lang="zh">01 · 何谓零知识证明？</span></div>
+  <h2 class="section-title"><span lang="en">Prove a fact. Reveal nothing.</span><span lang="zh">证明事实。不泄露任何东西。</span></h2>
+  <p class="section-lede"><span lang="en">A prover convinces a verifier that a public statement <code>x</code> is true, by exhibiting knowledge of a private witness <code>w</code> such that the circuit <code>C(x, w) = 1</code>. The proof π is short, uniform, and reveals nothing about <code>w</code>. With recursion, π can verify another π — collapsing arbitrary computation into a single object.</span><span lang="zh">证明者向验证者证明：公开命题 <code>x</code> 为真——通过对私有见证 <code>w</code>（使电路 <code>C(x, w) = 1</code>）的知识。证明 π 短小、统一、不泄露任何关于 <code>w</code> 的信息。借助递归，π 可验证另一个 π——将任意计算坍缩为单一对象。</span></p>
+
+  <div class="zk-canvas"><div id="zk-canvas"></div></div>
+
+  <div class="grid" style="margin-top: 24px;">
+    <div class="card">
+      <div class="meta">zk-SNARK</div>
+      <h3><span lang="en">Succinct & non-interactive</span><span lang="zh">简洁、非交互</span></h3>
+      <p lang="en">Trusted-setup, pairing-based curves. ~200-byte proofs verifiable in milliseconds. Powers Zcash, Polygon zkEVM, Aztec.</p>
+      <p lang="zh">需可信启动，基于配对曲线。证明仅约 200 字节，毫秒级可验。驱动 Zcash、Polygon zkEVM、Aztec。</p>
+    </div>
+    <div class="card amber">
+      <div class="meta">zk-STARK</div>
+      <h3><span lang="en">Hash-based, post-quantum</span><span lang="zh">基于哈希，抗量子</span></h3>
+      <p lang="en">No trusted setup. Larger proofs (50–200 KB) but transparent and quantum-resistant. The substrate of StarkNet, RISC Zero, Plonky2.</p>
+      <p lang="zh">无须可信启动。证明较大（50—200 KB），但透明且抗量子。是 StarkNet、RISC Zero、Plonky2 的基质。</p>
+    </div>
+    <div class="card rose">
+      <div class="meta">PLONK family</div>
+      <h3><span lang="en">Universal & updatable</span><span lang="zh">通用 · 可更新</span></h3>
+      <p lang="en">One trusted-setup serves all circuits. Custom gates make domain-specific provers fast. The dominant arithmetisation of the late 2020s.</p>
+      <p lang="zh">一次可信启动服务所有电路。自定义门让特定领域的证明者高效。是 2020 年代后期的主导算术化方案。</p>
+    </div>
+    <div class="card violet">
+      <div class="meta">Recursion / folding</div>
+      <h3><span lang="en">A proof verifying a proof</span><span lang="zh">用证明验证证明</span></h3>
+      <p lang="en">Plonky2, Halo2, Nova, ProtoStar. The economic miracle: an entire chain of computation can be folded into one constant-size π — the technical substrate of every civilization-scale ZK system.</p>
+      <p lang="zh">Plonky2、Halo2、Nova、ProtoStar。经济奇迹：整条计算链可被折叠为单一常数大小的 π——这是每个文明级 ZK 系统的技术基质。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. Trust ladder ===== -->
+<section id="trust">
+  <div class="section-eyebrow"><span lang="en">02 · Trust Evolution</span><span lang="zh">02 · 信任的演化</span></div>
+  <h2 class="section-title"><span lang="en">Six rungs, twelve thousand years</span><span lang="zh">六级阶梯，一万二千年</span></h2>
+  <p class="section-lede"><span lang="en">Each rung keeps the previous one running underneath. We still trust kin and gods. The new rung adds to the stack — and exposes failure modes the previous rungs could not anticipate.</span><span lang="zh">每一级都保留下一级在底部运行。我们仍信任血亲与神明。新一级只是为堆栈增层——并暴露下层未曾预见的新失败模式。</span></p>
+
+  <div id="trust-ladder" class="trust-ladder"></div>
+</section>
+
+<!-- ===== 3. Consensus ===== -->
+<section id="consensus">
+  <div class="section-eyebrow"><span lang="en">03 · Consensus & Coordination</span><span lang="zh">03 · 共识与协调</span></div>
+  <h2 class="section-title"><span lang="en">Five ways strangers agree on what happened</span><span lang="zh">陌生人就'发生了什么'达成一致的五种方式</span></h2>
+  <p class="section-lede"><span lang="en">A consensus algorithm is a procedure for letting a global anonymous network agree on a single ordering of events. Each makes a different trade between latency, security and decentralisation. ZK changes the picture: instead of debating who is right, the network checks the proof.</span><span lang="zh">共识算法让全球匿名网络对事件顺序达成一致。各算法在延迟、安全与去中心化之间作不同权衡。ZK 改变了图景：网络不再争论谁对，而是直接验证证明。</span></p>
+
+  <table class="cons-table">
+    <thead>
+      <tr>
+        <th><span lang="en">System</span><span lang="zh">系统</span></th>
+        <th><span lang="en">Sybil basis</span><span lang="zh">抗女巫基础</span></th>
+        <th><span lang="en">Finality</span><span lang="zh">最终性</span></th>
+        <th><span lang="en">ZK posture</span><span lang="zh">ZK 取向</span></th>
+      </tr>
+    </thead>
+    <tbody id="consensus-body"></tbody>
+  </table>
+</section>
+
+<!-- ===== 4. Privacy vs Transparency ===== -->
+<section id="privacy">
+  <div class="section-eyebrow"><span lang="en">04 · Privacy vs Transparency</span><span lang="zh">04 · 隐私与透明</span></div>
+  <h2 class="section-title"><span lang="en">The unbundling of identity</span><span lang="zh">身份的去捆绑</span></h2>
+  <p class="section-lede"><span lang="en">Privacy without verifiability is hiding. Verifiability without privacy is surveillance. ZK is the first technology that gives both at once — forcing every state, platform and individual to choose what they will carry.</span><span lang="zh">无可验证性的隐私是躲藏。无隐私的可验证是监视。ZK 是首个同时给予二者的技术——并迫使每个国家、平台与个人选择'携带什么'。</span></p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="meta">▣ selective</div>
+      <h3><span lang="en">Selective disclosure</span><span lang="zh">选择性披露</span></h3>
+      <p lang="en">Prove you are over 18 without revealing your birth date. Prove you are a citizen without revealing which one. Prove you have funds without revealing how many. The unit-bundle of identity unbundles.</p>
+      <p lang="zh">证明已成年而不暴露生日。证明是公民而不暴露国籍。证明有资金而不暴露金额。身份的整包被拆散。</p>
+    </div>
+    <div class="card amber">
+      <div class="meta">▣ resistance</div>
+      <h3><span lang="en">Censorship resistance</span><span lang="zh">抗审查</span></h3>
+      <p lang="en">A transaction signed by a private key cannot be unsigned by an institution. A node can be cut off; the math cannot be repealed. The substrate-level guarantee.</p>
+      <p lang="zh">由私钥签名的交易，无法被机构反签。节点可被切断；数学无法被废止。这是基质层的保证。</p>
+    </div>
+    <div class="card rose">
+      <div class="meta">▣ surveillance</div>
+      <h3><span lang="en">The transparency paradox</span><span lang="zh">透明悖论</span></h3>
+      <p lang="en">Public ledgers like Bitcoin's are pseudonymous, not anonymous. Every transaction is permanent and globally visible. ZK is what turns a transparent ledger into a verifiable but private one.</p>
+      <p lang="zh">比特币这类公链是化名，而非匿名。每笔交易都永久且全球可见。ZK 将透明账本转化为可验证但隐私的账本。</p>
+    </div>
+    <div class="card violet">
+      <div class="meta">▣ portability</div>
+      <h3><span lang="en">Network passport</span><span lang="zh">网络护照</span></h3>
+      <p lang="en">A cryptographic identity that travels with you between protocols, jurisdictions, platforms. Reputation, attestation, voting power, credentials become portable — and the nation-state becomes one provider among many.</p>
+      <p lang="zh">一种随你在协议、法域、平台间穿行的密码学身份。声誉、属性证明、投票权、凭证皆可携带——民族国家由此成为众多供应商之一。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. Narratives ===== -->
+<section id="narratives">
+  <div class="section-eyebrow"><span lang="en">05 · Seven ZK Narratives</span><span lang="zh">05 · 七种 ZK 叙事</span></div>
+  <h2 class="section-title"><span lang="en">Seven futures the same technology is being sold as</span><span lang="zh">同一项技术被许诺的七种未来</span></h2>
+  <p class="section-lede"><span lang="en">The math is one. The ideologies are many. Each narrative pulls ZK infrastructure toward a different political end-state. They are not equally compatible.</span><span lang="zh">数学只有一种，意识形态却有许多。每种叙事将 ZK 基础设施拉向不同的政治终态。它们之间未必相容。</span></p>
+
+  <div class="narratives" id="narratives"></div>
+</section>
+
+<!-- ===== 6. Culture ===== -->
+<section id="culture">
+  <div class="section-eyebrow"><span lang="en">06 · Culture & Community</span><span lang="zh">06 · 文化与社区</span></div>
+  <h2 class="section-title"><span lang="en">Six norms that hold the cypherpunk diaspora together</span><span lang="zh">维系密码朋克离散群体的六条规范</span></h2>
+  <p class="section-lede"><span lang="en">A protocol is half technology, half subculture. The culture is what survives a fork — the memes, the disciplines, the unwritten rules of who builds and who only talks. Without these, the math is just a paper.</span><span lang="zh">协议有一半是技术、一半是亚文化。文化是分叉后仍存留之物——迷因、规训、关于'谁在建造、谁只在说话'的不成文规则。无此者，数学不过是一篇论文。</span></p>
+
+  <div class="grid three" id="culture-grid"></div>
+</section>
+
+<!-- ===== 7. Psy & Recursion ===== -->
+<section id="psy">
+  <div class="section-eyebrow"><span lang="en">07 · Psy Protocol & Next-Generation ZK</span><span lang="zh">07 · Psy 协议与下一代 ZK</span></div>
+  <h2 class="section-title"><span lang="en">From single proofs to civilization-scale recursion</span><span lang="zh">从单一证明到文明级递归</span></h2>
+  <p class="section-lede"><span lang="en">First-generation ZK proves one transaction. Second-generation ZK proves one batch. Third-generation systems — Psy Protocol, =nil; Foundation's proof market, Aligned Layer, Succinct's proof network — aggregate proofs across chains, applications, and entire ecosystems into a single recursive object.</span><span lang="zh">第一代 ZK 证明一笔交易。第二代 ZK 证明一批交易。第三代系统——Psy 协议、=nil; 基金会的证明市场、Aligned Layer、Succinct 证明网络——将跨链、跨应用、跨整个生态的证明聚合为单一递归对象。</span></p>
+
+  <div class="grid two">
+    <div class="card">
+      <div class="meta">Layer · proof aggregation</div>
+      <h3><span lang="en">Aggregation as a market</span><span lang="zh">作为市场的聚合</span></h3>
+      <p lang="en">Provers compete to prove batches. A separate aggregator collects their proofs, verifies them, and recursively bundles all into one final π. The L1 verifies one proof; the world's worth of computation rides on it.</p>
+      <p lang="zh">证明者竞争生成批次证明。独立聚合者收集它们、验证后再递归打包为单一最终 π。L1 仅验证一份证明；整个世界量级的计算搭载其上。</p>
+    </div>
+    <div class="card amber">
+      <div class="meta">Layer · decentralised proving</div>
+      <h3><span lang="en">Provers without privilege</span><span lang="zh">没有特权的证明者</span></h3>
+      <p lang="en">Anyone with a GPU can earn from proving. No permissioned operator. Slashing for invalid proofs. A market that prices proof generation honestly — provided it does not centralise into a few cluster-owners.</p>
+      <p lang="zh">任何拥有 GPU 的人皆可通过证明赚取收益。无须许可的运营者。无效证明会被惩罚。一个为证明生成定价的诚实市场——前提是它不集中于少数集群拥有者。</p>
+    </div>
+    <div class="card rose">
+      <div class="meta">Layer · cross-chain</div>
+      <h3><span lang="en">One proof, every chain</span><span lang="zh">一份证明，所有链</span></h3>
+      <p lang="en">A recursive proof that aggregates state transitions from Ethereum, Cosmos, Solana, Bitcoin SPV — and lets each chain trustlessly verify the others' history without a bridge committee.</p>
+      <p lang="zh">一份递归证明，聚合来自以太坊、Cosmos、Solana、比特币 SPV 的状态转移——使每条链都可在无须桥委员会的情况下，无信任地验证彼此的历史。</p>
+    </div>
+    <div class="card violet">
+      <div class="meta">Layer · application</div>
+      <h3><span lang="en">Civilization-scale verifiable compute</span><span lang="zh">文明级可验证计算</span></h3>
+      <p lang="en">Once aggregation is cheap, every meaningful global computation eventually folds into a single recursive π anchored on a public ledger. The boundary between "what the chain runs" and "what the world runs" begins to dissolve.</p>
+      <p lang="zh">一旦聚合便宜，每一项有意义的全球计算最终折叠为锚于公链的单一递归 π。'链运行的'与'世界运行的'之间的界限开始消解。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. Math lab ===== -->
+<section id="math">
+  <div class="section-eyebrow"><span lang="en">08 · Mathematical Foundations Laboratory</span><span lang="zh">08 · 数学基础实验室</span></div>
+  <h2 class="section-title"><span lang="en">Six primitives every proof system rests on</span><span lang="zh">每个证明系统所依赖的六项原语</span></h2>
+  <p class="section-lede"><span lang="en">If you understand these six objects, you understand every working ZK system. They are the alphabet from which all modern proofs are spelled.</span><span lang="zh">若你理解这六个对象，你便理解每个可运行的 ZK 系统。它们是现代证明拼写所依据的字母表。</span></p>
+
+  <div class="lab" id="math-lab"></div>
+</section>
+
+<!-- ===== 9. Futures ===== -->
+<section id="futures">
+  <div class="section-eyebrow"><span lang="en">09 · Future Civilization Scenarios</span><span lang="zh">09 · 未来文明情境</span></div>
+  <h2 class="section-title"><span lang="en">Six things that get built once verification is cheap</span><span lang="zh">验证变便宜后，会被建造的六件事</span></h2>
+  <p class="section-lede"><span lang="en">When the cost of proving a computation drops below the cost of the computation itself, the social contract shifts. Every claim about a model, a transaction, an identity, a judgement begins to ship with a receipt.</span><span lang="zh">当证明一项计算的成本低于该计算本身，社会契约即发生迁移。关于模型、交易、身份、判断的每一项主张，都开始附带一张回执。</span></p>
+
+  <div class="grid two" id="futures-grid"></div>
+</section>
+
+<!-- ===== 10. Simulator ===== -->
+<section id="sim">
+  <div class="section-eyebrow"><span lang="en">10 · Civilization Simulator</span><span lang="zh">10 · 文明模拟器</span></div>
+  <h2 class="section-title"><span lang="en">Six dials, four civilization outputs</span><span lang="zh">六个旋钮，四项文明输出</span></h2>
+  <p class="section-lede"><span lang="en">A toy model. Move the dials to assemble a coordination regime; the verdict at the bottom maps your configuration onto a known archetype: 1990s internet, 2010s platforms, 2020s ZK rollups, surveillance state, recursive-proof market, or a hypothetical 2040s mathematical civilization.</span><span lang="zh">一个玩具模型。移动旋钮以拼装一个协调体制；底部判决将您的配置映射到一个已知原型：1990 年代互联网、2010 年代平台、2020 年代 ZK 汇总、监视国家、递归证明市场，或2040 年代假设的数学文明。</span></p>
+
+  <div class="sim" id="simulator">
+    <div class="sim-controls">
+      <div class="ctrl"><label><span lang="en">Computation</span><span lang="zh">计算</span><span class="val" data-val="compute"></span></label><input type="range" id="ctrl-compute" min="0" max="100" value="75"></div>
+      <div class="ctrl"><label><span lang="en">Cryptography</span><span lang="zh">密码学</span><span class="val" data-val="crypto"></span></label><input type="range" id="ctrl-crypto" min="0" max="100" value="80"></div>
+      <div class="ctrl"><label><span lang="en">Mathematics</span><span lang="zh">数学</span><span class="val" data-val="math"></span></label><input type="range" id="ctrl-math" min="0" max="100" value="80"></div>
+      <div class="ctrl"><label><span lang="en">Consensus</span><span lang="zh">共识</span><span class="val" data-val="consensus"></span></label><input type="range" id="ctrl-consensus" min="0" max="100" value="70"></div>
+      <div class="ctrl"><label><span lang="en">Incentives</span><span lang="zh">激励</span><span class="val" data-val="incentives"></span></label><input type="range" id="ctrl-incentives" min="0" max="100" value="65"></div>
+      <div class="ctrl"><label><span lang="en">Shared reality</span><span lang="zh">共享现实</span><span class="val" data-val="shared"></span></label><input type="range" id="ctrl-shared" min="0" max="100" value="65"></div>
+    </div>
+    <div class="sim-output">
+      <div class="sim-meter" data-meter="trust"><span><span lang="en">Trust capacity</span><span lang="zh">信任容量</span></span><div class="bar"><div class="bar-fill"></div></div><span class="num">0</span></div>
+      <div class="sim-meter" data-meter="coordination"><span><span lang="en">Coordination scale</span><span lang="zh">协调规模</span></span><div class="bar"><div class="bar-fill"></div></div><span class="num">0</span></div>
+      <div class="sim-meter" data-meter="sovereignty"><span><span lang="en">Sovereignty</span><span lang="zh">主权</span></span><div class="bar"><div class="bar-fill"></div></div><span class="num">0</span></div>
+      <div class="sim-meter" data-meter="fragility"><span><span lang="en">Fragility</span><span lang="zh">脆弱性</span></span><div class="bar"><div class="bar-fill"></div></div><span class="num">0</span></div>
+      <div class="sim-summary">
+        <span id="sim-summary-en" lang="en"></span>
+        <span id="sim-summary-zh" lang="zh"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. Risks ===== -->
+<section id="risks">
+  <div class="section-eyebrow"><span lang="en">11 · Risks & Contradictions</span><span lang="zh">11 · 风险与矛盾</span></div>
+  <h2 class="section-title"><span lang="en">Every coordination layer creates new power structures</span><span lang="zh">每一层协调机制都生成新的权力结构</span></h2>
+  <p class="section-lede"><span lang="en">A protocol is not a politics-free zone. The next chapter is written by whoever runs the prover farms, writes the circuits, and ships the foundation grants.</span><span lang="zh">协议不是政治真空。下一章由运营证明者农场、撰写电路、发放基金会拨款的人书写。</span></p>
+
+  <div class="grid two" id="risks-grid"></div>
+</section>
+
+<!-- ===== Closing ===== -->
+<section id="closing">
+  <div class="section-eyebrow"><span lang="en">∞ · Closing</span><span lang="zh">∞ · 终章</span></div>
+  <h2 class="section-title"><span lang="en">Math is the slowest-moving and most permanent layer of any civilization</span><span lang="zh">在任何文明中，数学都是迁移最慢、保持最久的一层</span></h2>
+  <p class="section-lede" style="font-style: italic;"><span lang="en">Religions schism, empires fall, banks fail, platforms close. A theorem, once proved, is proved forever. The bet behind zero-knowledge civilization is that <em>moving as much of the trust stack as possible into the most permanent layer is the safest direction</em> for a species that just spent fifty years discovering how easily its institutions can fail.</span><span lang="zh">宗教分裂、帝国崩溃、银行倒闭、平台关停。一个定理一旦被证明，就被永远证明。零知识文明的赌注是：<em>将信任堆栈尽可能多地迁入最持久的那一层，对一个刚用五十年发现自己机构有多容易失败的物种而言，是最安全的方向。</em></span></p>
+  <p style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-soft); margin-top: 24px;">
+    <span lang="en">— π · companion to <a href="https://psy.psyverse.fun">psy.psyverse.fun</a> &amp; <a href="https://zk-civilization.psyverse.fun">zk-civilization.psyverse.fun</a></span>
+    <span lang="zh">— π · 伴随 <a href="https://psy.psyverse.fun">psy.psyverse.fun</a> 与 <a href="https://zk-civilization.psyverse.fun">zk-civilization.psyverse.fun</a></span>
+  </p>
+</section>
+
+<footer>
+  <div>
+    <span lang="en">Built by <a href="https://psyverse.fun">Gewenbo</a> · part of the Psyverse</span>
+    <span lang="zh">由 <a href="https://psyverse.fun">Gewenbo</a> 制作 · Psyverse 之一</span>
+  </div>
+  <div>
+    <a href="https://github.com/gewenbo888/cryptocivilization">GitHub</a>
+    · <a href="https://psyverse.fun">psyverse.fun</a>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
