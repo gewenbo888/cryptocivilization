@@ -1,50 +1,55 @@
 /* ===== Cryptocivilization — phosphor-green lab notebook ===== */
 :root{
-  --bg: #0a0e16;
-  --bg-2: #11161e;
-  --bg-3: #181f2a;
-  --line: #2a3344;
-  --line-2: #3d4a63;
-  --ink: #e6ebf0;
-  --ink-soft: #93a3b6;
-  --phosphor: #7af0a8;
-  --phosphor-dim: #54c182;
-  --amber: #f0d05e;
-  --rose: #e87aa8;
-  --violet: #b292e8;
+  --bg: #0a0a0c;
+  --bg-2: #16161a;
+  --bg-3: #26262a;
+  --line: rgba(250,250,250,0.10);
+  --line-2: rgba(250,250,250,0.22);
+  --ink: #fafafa;
+  --ink-soft: #a3a3ab;
+  /* Canonical Psy mint accent — names retained */
+  --phosphor: #61f5b3;
+  --phosphor-dim: #61f5b3;
+  --amber: #a3a3ab;
+  --rose: #a3a3ab;
+  --violet: #a3a3ab;
+  --primary: #61f5b3;
+  --primary-glow: rgba(97,245,179,0.28);
 }
 [data-theme="light"]{
-  --bg: #f6f7f0;
+  --bg: #ffffff;
   --bg-2: #ffffff;
-  --bg-3: #ecede2;
-  --line: #cdd1bf;
-  --line-2: #b3b8a3;
-  --ink: #0c1014;
-  --ink-soft: #4a5365;
-  --phosphor: #1a8a4a;
-  --phosphor-dim: #2a9a5e;
-  --amber: #a8772a;
-  --rose: #b53f74;
-  --violet: #6a4ab0;
+  --bg-3: #f8f8f8;
+  --line: rgba(10,10,12,0.13);
+  --line-2: rgba(10,10,12,0.30);
+  --ink: #0a0a0c;
+  --ink-soft: #4f5260;
+  --phosphor: #00b87b;
+  --phosphor-dim: #00b87b;
+  --amber: #4f5260;
+  --rose: #4f5260;
+  --violet: #4f5260;
+  --primary: #00b87b;
+  --primary-glow: rgba(0,184,123,0.20);
 }
 
 *{box-sizing: border-box}
 html, body{margin:0; padding:0}
 html{scroll-behavior: smooth; scroll-padding-top: 72px}
 body{
-  font-family: "Source Serif 4", Georgia, serif;
+  font-family: "Inter", "Noto Sans SC", system-ui, sans-serif;
   font-size: 17px; line-height: 1.65;
   color: var(--ink); background: var(--bg);
   background-image:
-    radial-gradient(900px 600px at 12% -8%, rgba(122,240,168,0.07), transparent 60%),
-    radial-gradient(700px 500px at 105% 30%, rgba(240,208,94,0.05), transparent 60%),
-    radial-gradient(700px 500px at 50% 120%, rgba(232,122,168,0.05), transparent 60%);
+    radial-gradient(900px 600px at 12% -8%, rgba(97,245,179,0.10), transparent 60%),
+    radial-gradient(700px 500px at 105% 30%, rgba(97,245,179,0.05), transparent 60%),
+    radial-gradient(700px 500px at 50% 120%, rgba(97,245,179,0.04), transparent 60%);
 }
 [data-theme="light"] body{
   background-image:
-    radial-gradient(900px 600px at 12% -8%, rgba(26,138,74,0.08), transparent 60%),
-    radial-gradient(700px 500px at 105% 30%, rgba(168,119,42,0.05), transparent 60%),
-    radial-gradient(700px 500px at 50% 120%, rgba(181,63,116,0.05), transparent 60%);
+    radial-gradient(900px 600px at 12% -8%, rgba(0,184,123,0.08), transparent 60%),
+    radial-gradient(700px 500px at 105% 30%, rgba(0,184,123,0.05), transparent 60%),
+    radial-gradient(700px 500px at 50% 120%, rgba(0,184,123,0.04), transparent 60%);
 }
 
 a{color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px}
@@ -59,7 +64,7 @@ html[data-lang="zh"] [lang="zh"]{display:initial}
 html svg [lang="zh"]{display:none}
 html[data-lang="zh"] svg [lang="zh"]{display:inline}
 html[data-lang="zh"] svg [lang="en"]{display:none}
-html[data-lang="zh"]{font-family: "Noto Serif SC", "Source Han Serif SC", "Source Serif 4", Georgia, serif;}
+html[data-lang="zh"]{font-family: "Noto Serif SC", "Source Han Serif SC", "Inter", "Noto Sans SC", system-ui, sans-serif;}
 
 /* Topbar */
 .topbar{
@@ -80,12 +85,11 @@ html[data-lang="zh"]{font-family: "Noto Serif SC", "Source Han Serif SC", "Sourc
 }
 .brand .seal{
   display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 4px;
-  background: var(--bg-2); color: var(--phosphor);
-  border: 1px solid var(--phosphor);
-  box-shadow: 0 0 12px rgba(122,240,168,0.25), inset 0 0 6px rgba(122,240,168,0.15);
-  font-family: "JetBrains Mono", monospace; font-size: 18px; font-weight: 700;
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--primary); color: var(--bg);
+  box-shadow: 0 0 14px var(--primary-glow);
 }
+.brand .seal svg{ width: 64%; height: 64%; display: block; fill: currentColor; }
 [data-theme="light"] .brand .seal{
   box-shadow: 0 0 0 1px var(--phosphor) inset, 0 1px 0 rgba(0,0,0,0.05);
 }
